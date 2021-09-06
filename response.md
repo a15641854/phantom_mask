@@ -6,8 +6,8 @@
 Link: [doc/postMan.json](doc/postMan.json)
 
 ### Import Data Commands
-  `rake import_data:book_store[PATH_TO_FILE]`
-  `rake import_data:user[PATH_TO_FILE]`
+  `mongoimport pharmacies.json -d test -c pharmacies --jsonArray --drop`
+  `mongoimport [PATH_TO_FILE] -d test -c user --jsonArray --drop`
 
 ## Bonus
 ### Test Coverage Report
