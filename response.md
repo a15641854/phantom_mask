@@ -6,7 +6,7 @@
 Link: [doc/postMan.json](doc/postMan.json)
 
 ### Import Data Commands
-  `mongoimport pharmacies.json -d test -c pharmacies --jsonArray --drop`
+  `mongoimport [PATH_TO_FILE] -d test -c pharmacies --jsonArray --drop`
   `mongoimport [PATH_TO_FILE] -d test -c user --jsonArray --drop`
 
 ## Bonus
