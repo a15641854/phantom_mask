@@ -3,7 +3,7 @@
 
 ## Required
 ### API Document
-  Import [this](#api-document) json file to Postman
+Link: [doc/postMan.json](doc/postMan.json)
 
 ### Import Data Commands
   `rake import_data:book_store[PATH_TO_FILE]`
