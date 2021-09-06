@@ -1,0 +1,869 @@
+{
+	"info": {
+		"_postman_id": "3c3aa15e-a8d6-4783-98c7-09b4ea77ce6d",
+		"name": "Phantom Mask",
+		"description": "# Introduction\nquery and update database\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nNo\n\n# Error Codes\nNo\n\n# Rate limit\nNO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://192.168.1.113:8080/api/index.php?queryPharmaciesByTime",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "time",
+							"value": "11:01",
+							"description": "certain time",
+							"type": "text"
+						},
+						{
+							"key": "Day",
+							"value": "Mon",
+							"description": "a day of the week",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.113:8080/api/index.php?queryPharmaciesByTime",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"113"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "queryPharmaciesByTime",
+							"value": null
+						}
+					]
+				},
+				"description": "List all pharmacies that are open at a certain time, and on a day of the week if requested"
+			},
+			"response": [
+				{
+					"name": "http://192.168.1.113:8080/api/index.php?queryPharmaciesByTime",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "time",
+									"value": "11:01",
+									"type": "text"
+								},
+								{
+									"key": "Day",
+									"value": "Mon",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.1.113:8080/api/index.php?queryPharmaciesByTime",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"1",
+								"113"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "queryPharmaciesByTime",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "192.168.1.113:8080"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 09:03:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.8"
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "[{\"_id\":{\"$oid\":\"61345dded5366ca32e59c312\"},\"name\":\"Cash Saver Pharmacy\",\"cashBalance\":921.4500000000006,\"openingHours\":\"Mon 11:00 - 14:48 \\/ Tue, Fri 00:05 - 07:20 \\/ Sat - Sun 09:01 - 12:43\",\"masks\":[{\"name\":\"MaskT (black) (10 per pack)\",\"price\":14.9},{\"name\":\"Free to Roam (black) (3 per pack)\",\"price\":13.83},{\"name\":\"AniMask (green) (10 per pack)\",\"price\":49.21},{\"name\":\"Masquerade (blue) (6 per pack)\",\"price\":16.75}]}]"
+				}
+			]
+		},
+		{
+			"name": "http://192.168.1.113:8080/api/index.php?search",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "keyWord",
+							"value": "Better",
+							"description": "search term\n",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.113:8080/api/index.php?search",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"113"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": null
+						}
+					]
+				},
+				"description": "Search for pharmacies or masks by name, ranked by relevance to search term"
+			},
+			"response": [
+				{
+					"name": "http://192.168.1.113:8080/api/index.php?search",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "keyWord",
+									"value": "Better",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.1.113:8080/api/index.php?search",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"1",
+								"113"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "192.168.1.113:8080"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 09:02:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.8"
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "[{\"_id\":{\"$oid\":\"613340f53e80805f8c3d21ed\"},\"name\":\"Better You\",\"cashBalance\":777.61,\"openingHours\":\"Mon, Wed 12:56 - 21:58 \\/ Tue 13:06 - 22:42 \\/ Fri - Sat 17:09 - 20:20 \\/ Sun 07:10 - 09:33\",\"masks\":[{\"name\":\"AniMask (blue) (10 per pack)\",\"price\":33.65}]}]"
+				}
+			]
+		},
+		{
+			"name": "http://192.168.1.113:8080/api/index.php?topX",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start_time",
+							"value": "2021-01-02 20:41:01",
+							"description": "date range start",
+							"type": "text"
+						},
+						{
+							"key": "end_time",
+							"value": "2021-01-02 20:41:04",
+							"description": "date range end",
+							"type": "text"
+						},
+						{
+							"key": "top_count",
+							"value": "2",
+							"description": "x users",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.113:8080/api/index.php?topX",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"113"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "topX",
+							"value": null
+						}
+					]
+				},
+				"description": "The top x users by total transaction amount of masks within a date range"
+			},
+			"response": [
+				{
+					"name": "http://192.168.1.113:8080/api/index.php?topX",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start_time",
+									"value": "2021-01-02 20:41:01",
+									"type": "text"
+								},
+								{
+									"key": "end_time",
+									"value": "2021-01-02 20:41:04",
+									"type": "text"
+								},
+								{
+									"key": "top_count",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.1.113:8080/api/index.php?topX",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"1",
+								"113"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "topX",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "192.168.1.113:8080"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 09:02:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.8"
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "[{\"name\":\"Eric Underwood\",\"total\":9.26}]"
+				}
+			]
+		},
+		{
+			"name": "http://192.168.1.113:8080/api/index.php?getTotalAmontAndDollar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start_time",
+							"value": "2021-01-02 20:41:01",
+							"description": "date range start",
+							"type": "text"
+						},
+						{
+							"key": "end_time",
+							"value": "2021-01-02 20:41:04",
+							"description": "date range end",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.113:8080/api/index.php?getTotalAmontAndDollar",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"113"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "getTotalAmontAndDollar",
+							"value": null
+						}
+					]
+				},
+				"description": "The total amount of masks and dollar value of transactions that happened within a date range"
+			},
+			"response": [
+				{
+					"name": "http://192.168.1.113:8080/api/index.php?getTotalAmontAndDollar",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start_time",
+									"value": "2021-01-02 20:41:01",
+									"type": "text"
+								},
+								{
+									"key": "end_time",
+									"value": "2021-01-02 20:41:04",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.1.113:8080/api/index.php?getTotalAmontAndDollar",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"1",
+								"113"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "getTotalAmontAndDollar",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "192.168.1.113:8080"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 09:02:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.8"
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"total amount of masks\":9.26,\"dollar value\":3}"
+				}
+			]
+		},
+		{
+			"name": "http://192.168.1.113:8080/api/index.php?getMaskByPharmacies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pharmacyName",
+							"value": "Better You",
+							"description": "pharmacy Name",
+							"type": "text"
+						},
+						{
+							"key": "sort_key",
+							"value": "price",
+							"description": "sort by",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.113:8080/api/index.php?getMaskByPharmacies",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"113"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "getMaskByPharmacies",
+							"value": null
+						}
+					]
+				},
+				"description": "List all masks that are sold by a given pharmacy, sorted by mask name or mask price"
+			},
+			"response": [
+				{
+					"name": "http://192.168.1.113:8080/api/index.php?getMaskByPharmacies",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pharmacyName",
+									"value": "Better You",
+									"type": "text"
+								},
+								{
+									"key": "sort_key",
+									"value": "price",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.1.113:8080/api/index.php?getMaskByPharmacies",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"1",
+								"113"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "getMaskByPharmacies",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "192.168.1.113:8080"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 09:02:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.8"
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "[{\"name\":\"Better You\",\"cashBalance\":777.61,\"openingHours\":\"Mon, Wed 12:56 - 21:58 \\/ Tue 13:06 - 22:42 \\/ Fri - Sat 17:09 - 20:20 \\/ Sun 07:10 - 09:33\",\"masks\":{\"name\":\"AniMask (blue) (10 per pack)\",\"price\":33.65}}]"
+				}
+			]
+		},
+		{
+			"name": "http://192.168.1.113:8080/api/index.php?getPharmaciesBymask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ceil",
+							"value": "34",
+							"description": "price range ceil",
+							"type": "text"
+						},
+						{
+							"key": "floor",
+							"value": "33",
+							"description": "price range floor",
+							"type": "text"
+						},
+						{
+							"key": "less",
+							"value": "2",
+							"description": "less than x mask",
+							"type": "text"
+						},
+						{
+							"key": "more",
+							"value": "0",
+							"description": "more than x mask",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.113:8080/api/index.php?getPharmaciesBymask",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"113"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "getPharmaciesBymask",
+							"value": null
+						}
+					]
+				},
+				"description": "List all pharmacies that have more or less than x mask products within a price range"
+			},
+			"response": [
+				{
+					"name": "http://192.168.1.113:8080/api/index.php?getPharmaciesBymask",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ceil",
+									"value": "34",
+									"type": "text"
+								},
+								{
+									"key": "floor",
+									"value": "33",
+									"type": "text"
+								},
+								{
+									"key": "less",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "more",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.1.113:8080/api/index.php?getPharmaciesBymask",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"1",
+								"113"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "getPharmaciesBymask",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "192.168.1.113:8080"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 09:02:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.8"
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "[{\"name\":\"Better You\",\"cashBalance\":777.61,\"openingHours\":\"Mon, Wed 12:56 - 21:58 \\/ Tue 13:06 - 22:42 \\/ Fri - Sat 17:09 - 20:20 \\/ Sun 07:10 - 09:33\",\"masks\":[{\"name\":\"AniMask (blue) (10 per pack)\",\"price\":33.65}]}]"
+				}
+			]
+		},
+		{
+			"name": "http://192.168.1.113:8080/api/index.php?buyMask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pharmacyName",
+							"value": "Cash Saver Pharmacy",
+							"description": "pharmacy name",
+							"type": "text"
+						},
+						{
+							"key": "maskName",
+							"value": "MaskT (black) (10 per pack)",
+							"description": "mask name",
+							"type": "text"
+						},
+						{
+							"key": "userName",
+							"value": "Eric Underwood",
+							"description": "user name",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.113:8080/api/index.php?buyMask",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"113"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "buyMask",
+							"value": null
+						}
+					]
+				},
+				"description": "Process a user purchases a mask from a pharmacy, and handle all relevant data changes in an atomic transaction"
+			},
+			"response": [
+				{
+					"name": "http://192.168.1.113:8080/api/index.php?buyMask",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pharmacyName",
+									"value": "Cash Saver Pharmacy",
+									"type": "text"
+								},
+								{
+									"key": "maskName",
+									"value": "MaskT (black) (10 per pack)",
+									"type": "text"
+								},
+								{
+									"key": "userName",
+									"value": "Eric Underwood",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.1.113:8080/api/index.php?buyMask",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"1",
+								"113"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "buyMask",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "192.168.1.113:8080"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 09:02:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.8"
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"cashBalance of Cash Saver Pharmacy\":921.4500000000006,\"cashBalance of Eric Underwood\":217.1100000000001}"
+				}
+			]
+		}
+	]
+}
