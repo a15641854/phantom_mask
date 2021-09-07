@@ -14,7 +14,6 @@ Link: [doc/postMan.json](doc/postMan.json)
   check report [here](#test-coverage-report)
 
 ### Dockerized
-  check my dockerfile [here](#dockerized)
-
+  https://hub.docker.com/repository/docker/a15641854/my-php
 ### Demo Site Url
   demo site is ready on [heroku](#demo-site-url)
