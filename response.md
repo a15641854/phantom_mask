@@ -7,6 +7,7 @@
 # Import Data Commands
   
   pharmacies.json `mongoimport [PATH_TO_FILE] -d test -c pharmacies --jsonArray --drop`
+  
   users.json `mongoimport [PATH_TO_FILE] -d test -c user --jsonArray --drop`
   
 # Dockerized
